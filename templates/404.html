@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}
+We didn't find that page
+{% endblock %}
+
+{% block content %}
+<style>
+    .container {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 40px 0;
+        background: #fff;
+        font-family: 'Arvo', serif;
+    }
+
+    .four_zero_four_bg {
+        background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+        height: 400px;
+        background-position: center;
+    }
+
+    .four_zero_four_bg h1 {
+        font-size: 80px;
+        color: #fff;
+        margin-top: 0;
+    }
+
+    .contant_box_404 {
+        text-align: center;
+    }
+
+    .contant_box_404 h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .contant_box_404 p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .link_404 {
+        background: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="four_zero_four_bg">
+            <h1 class="text-center">404</h1>
+        </div>
+        <div class="contant_box_404">
+            <h3 class="h2">Oops! The page you are looking for could not be found.</h3>
+            <p>You may have mistyped the address or the page may have been moved or deleted.</p>
+            <a href="index.html" class="link_404">Go to Home</a>
+        </div>
+    </div>
+    {% endblock %}
