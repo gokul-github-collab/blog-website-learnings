@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} My Stored Posts {% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+<link rel="stylesheet" href="{% static 'blog/post.css' %}">
+{% endblock %}
+{% block content %}
+<section id="" style="margin-top: 7rem;">
+    {% if not has_posts %}
+    <p>No Posts are there for read later</p>
+    {% endif %}
+    <ul>
+        {% for post in posts %}
+        <li><a href="{% url 'post-detail-page' post.slug %}">{{post.title}}</a></li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
